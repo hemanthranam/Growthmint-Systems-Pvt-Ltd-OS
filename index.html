@@ -61,6 +61,9 @@ tailwind.config = {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
 }
+.price-toggle {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300 flex flex-col min-h-screen overflow-x-hidden m-0 p-0">
@@ -393,92 +396,334 @@ Business Automation Systems, <br/>
 </section>
 </main>
 
-<main id="page-plans" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-12 md:space-y-16 animate-fade-in hidden w-full">
-<div class="text-center max-w-3xl mx-auto space-y-3">
-<span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-tags"></i> Transparent Systems Pricing</span>
-<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-none">Unified Operating System Plans</h2>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Cost-efficient, low-maintenance architectures designed to replace bloated monthly software subscriptions.</p>
-</div>
-<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
-<div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200/40 dark:border-slate-700/40 hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
-<div class="space-y-4">
-<span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300"><i class="fas fa-bolt"></i> Lead Capture</span>
-<h3 class="text-sm md:text-base font-black tracking-tight truncate">Core OS - “LeadFlow Lite”</h3>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Best for small salons, local shops, freelancers, and beginner clinics needing basic lead security.</p>
-<div class="flex items-baseline space-x-1">
-<span class="text-3xl md:text-4xl font-extrabold tracking-tight">₹4,999</span>
-<span class="text-xs font-semibold text-slate-400">/ mo</span>
-</div>
-<span class="block text-[9px] font-bold text-slate-500">+ ₹12,000 Setup</span>
-<p class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider border-y py-2 border-indigo-100 dark:border-indigo-900/40"><i class="fas fa-crosshairs mr-1"></i> What You Get:</p>
-<ul class="text-[11px] space-y-3 text-slate-600 dark:text-slate-400">
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>1-3 page premium conversion landing page with WhatsApp click-to-chat.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Secure central database storage system for safe lead tracking.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Simple read-only dashboard to track total and new leads generated.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Instant automated email alerts triggered on new lead inquiries.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Monthly basic support and bug fixes to ensure 24/7 uptime.</li>
-</ul>
-</div>
-<button onclick="switchPage('contact')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-md shadow-brand-600/20">Contact Sales</button>
-</div>
+<main id="page-plans" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-12 animate-fade-in hidden w-full">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none text-slate-900 dark:text-white">
+            Run Your Entire Business <br class="hidden sm:block">from <span class="text-gradient">One System</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-2xl mx-auto">
+            Replace multiple tools, stop missing customers, and automate daily operations with a single Business Operating System built for MSMEs.
+        </p>
+        <div class="pt-2">
+            <button onclick="switchPage('contact')" class="px-8 py-4 rounded-xl text-xs font-bold premium-gradient text-white shadow-lg shadow-brand-600/30 hover:scale-[1.02] transition-transform">Book Free Consultation</button>
+        </div>
+    </div>
 
-<div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-xl border-2 border-brand-500 dark:border-brand-400 relative hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-0.5 rounded-full text-[9px] font-black tracking-widest uppercase premium-gradient text-white shadow-sm whitespace-nowrap"><i class="fas fa-certificate"></i> Recommended System</div>
-<div class="space-y-4 mt-2">
-<span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-indigo-50 text-indigo-700 dark:bg-slate-800 dark:text-indigo-300"><i class="fas fa-chart-line"></i> Conversion System</span>
-<h3 class="text-sm md:text-base font-black tracking-tight truncate">Growth OS - “ConvertFlow Pro”</h3>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Best for Clinics, Real Estate, Coaching institutes, and service businesses.</p>
-<div class="flex items-baseline space-x-1">
-<span class="text-3xl md:text-4xl font-extrabold tracking-tight">₹12,999</span>
-<span class="text-xs font-semibold text-slate-400">/ mo</span>
-</div>
-<span class="block text-[9px] font-bold text-slate-500">+ ₹30,000 Setup</span>
-<p class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider border-y py-2 border-indigo-100 dark:border-indigo-900/40"><i class="fas fa-arrow-circle-right mr-1"></i> What You Get:</p>
-<ul class="text-[11px] space-y-3 text-slate-600 dark:text-slate-400">
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Multi-section premium website (5-8 sections) with conversion popups.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Fully functional CRM pipeline (New → Contacted → Hot → Won → Lost).</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Editable lead details, notes, and status changes from a central CRM panel.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Appointment booking system synced directly with your digital calendar.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Interactive, auto-refreshing dashboard for real-time mobile tracking.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>WhatsApp API integration for automated messaging flows.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Automated 7-14 day email & WhatsApp follow-up reminder sequences.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Bi-weekly business summaries and monthly system strategy reviews.</li>
-</ul>
-</div>
-<button onclick="switchPage('contact')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-lg shadow-brand-600/30">Deploy Growth System</button>
-</div>
+    <div class="flex flex-col items-center justify-center space-y-3 pt-4">
+        <div class="flex items-center bg-slate-200/60 dark:bg-slate-800/60 p-1 rounded-xl shadow-sm border border-slate-300/40 dark:border-slate-700/40">
+            <button id="btn-monthly" onclick="togglePricing('monthly')" class="px-6 py-2 text-xs font-bold rounded-lg transition-all duration-300 bg-brand-500 text-white shadow-md">Monthly</button>
+            <button id="btn-yearly" onclick="togglePricing('yearly')" class="px-6 py-2 text-xs font-bold rounded-lg transition-all duration-300 text-slate-600 dark:text-slate-400 hover:text-brand-500">Yearly</button>
+        </div>
+        <div class="bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-400 px-3 py-1 rounded-full text-[10px] font-bold tracking-wide shadow-sm border border-amber-200 dark:border-amber-700/50 flex items-center justify-center">
+            <i class="fas fa-star mr-1.5 text-amber-500"></i> Save 10% on Yearly Plans
+        </div>
+    </div>
 
-<div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200/40 dark:border-slate-700/40 hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
-<div class="space-y-4">
-<span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300"><i class="fas fa-crown"></i> Full ERP System</span>
-<h3 class="text-sm md:text-base font-black tracking-tight truncate">Elite OS - “AutoPilot ERP”</h3>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Best for multi-staff businesses, high-volume MSMEs, agencies, and clinic chains.</p>
-<div class="flex items-baseline space-x-1">
-<span class="text-2xl md:text-3xl font-extrabold tracking-tight">₹34,999+</span>
-<span class="text-xs font-semibold text-slate-400">/ mo</span>
-</div>
-<span class="block text-[9px] font-bold text-slate-500">+ ₹90k Setup</span>
-<p class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider border-y py-2 border-indigo-100 dark:border-indigo-900/40"><i class="fas fa-arrow-circle-right mr-1"></i> What You Get:</p>
-<ul class="text-[11px] space-y-3 text-slate-600 dark:text-slate-400">
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Enterprise-grade AutoPilot ERP customized for high-volume MSMEs.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Advanced multi-stage CRM pipeline with role-based access (Admin/Staff).</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Dedicated Mobile ERP app for on-the-go lead editing and task tracking.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Full-stack WhatsApp API integration with multi-step automated sequences.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Powerful Missed Lead Recovery System and real-time alerts on data changes.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>AI Chatbot layer for 24/7 intelligent website lead capture.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Deep analytics dashboard tracking revenue, conversion, and staff KPIs.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Filtered analytics views by lead source and daily real-time metric updates.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Automated weekly business reports and monthly deep-dive analytics.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Unified cloud architecture replacing fragmented software tools.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Automated appointment calendar mapped directly to your mobile ERP app.</li>
-<li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i>Priority weekly review calls and continuous business scaling optimizations.</li>
-</ul>
-</div>
-<button onclick="switchPage('contact')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-md shadow-brand-600/20">Contact Enterprise Team</button>
-</div>
-</section>
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full pt-4">
+        
+        <div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 dark:border-slate-700/60 hover:-translate-y-1 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
+            <div class="space-y-4">
+                <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">Entry Plan</span>
+                <h3 class="text-xl font-black tracking-tight text-brand-700 dark:text-brand-400">Core OS</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed font-medium">Best for salons, local shops, freelancers, and small clinics.</p>
+                
+                <div class="flex flex-col border-y border-slate-200/50 dark:border-slate-700/50 py-4 my-2 min-h-[90px] justify-center">
+                    <div class="flex items-baseline space-x-1 price-monthly price-toggle">
+                        <span class="text-4xl font-extrabold tracking-tight">₹4,999</span>
+                        <span class="text-xs font-semibold text-slate-400">/ mo</span>
+                    </div>
+                    <div class="hidden flex-col price-yearly price-toggle">
+                        <div class="flex items-baseline space-x-1">
+                            <span class="text-4xl font-extrabold tracking-tight">₹53,989</span>
+                            <span class="text-xs font-semibold text-slate-400">/ yr</span>
+                        </div>
+                        <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 mt-1">~ Save ₹5,999</span>
+                    </div>
+                </div>
+
+                <ul class="text-[11px] space-y-3 text-slate-600 dark:text-slate-400 font-medium">
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Capture leads effortlessly</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Never miss enquiries</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Simple business tracking</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Instant notifications</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Professional online presence</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Secure customer storage</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Basic business organization</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Support included</li>
+                </ul>
+            </div>
+            <button onclick="switchPage('contact')" class="w-full py-3.5 rounded-xl text-xs font-bold border-2 border-brand-500 text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-slate-800 transition-all mt-6">Get Business Audit</button>
+        </div>
+
+        <div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-xl border-2 border-brand-500 relative hover:-translate-y-1 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-[9px] font-black tracking-widest uppercase premium-gradient text-white shadow-md whitespace-nowrap"><i class="fas fa-star mr-1.5"></i> Most Popular</div>
+            <div class="space-y-4 mt-2">
+                <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300">Scaling System</span>
+                <h3 class="text-xl font-black tracking-tight text-gradient">Growth OS</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed font-medium">Best for clinics, coaching institutes, real estate, consultants, and service businesses.</p>
+                
+                <div class="flex flex-col border-y border-brand-200/50 dark:border-brand-800/50 py-4 my-2 min-h-[90px] justify-center">
+                    <div class="flex items-baseline space-x-1 price-monthly price-toggle">
+                        <span class="text-4xl font-extrabold tracking-tight">₹12,999</span>
+                        <span class="text-xs font-semibold text-slate-400">/ mo</span>
+                    </div>
+                    <div class="hidden flex-col price-yearly price-toggle">
+                        <div class="flex items-baseline space-x-1">
+                            <span class="text-4xl font-extrabold tracking-tight">₹140,389</span>
+                            <span class="text-xs font-semibold text-slate-400">/ yr</span>
+                        </div>
+                        <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 mt-1">~ Save ₹15,599</span>
+                    </div>
+                </div>
+
+                <ul class="text-[11px] space-y-3 text-slate-600 dark:text-slate-400 font-medium">
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Track customers from enquiry to payment</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Never miss follow-ups</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Automatic reminders</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Appointment scheduling</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Organized business flow</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Faster response time</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Team coordination</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Clear business visibility</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Improved conversions</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Structured operations</li>
+                </ul>
+            </div>
+            <button onclick="switchPage('contact')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-lg shadow-brand-600/30 mt-6">Deploy My Business OS</button>
+        </div>
+
+        <div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 dark:border-slate-700/60 hover:-translate-y-1 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
+            <div class="space-y-4">
+                <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-slate-800 text-white dark:bg-slate-700">Enterprise</span>
+                <h3 class="text-xl font-black tracking-tight text-slate-800 dark:text-white">Elite OS</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed font-medium">Enterprise Business Operating System for high-volume MSMEs.</p>
+                
+                <div class="flex flex-col border-y border-slate-200/50 dark:border-slate-700/50 py-4 my-2 min-h-[90px] justify-center">
+                    <div class="flex items-baseline space-x-1 price-monthly price-toggle">
+                        <span class="text-4xl font-extrabold tracking-tight">₹34,999</span>
+                        <span class="text-xs font-semibold text-slate-400">/ mo</span>
+                    </div>
+                    <div class="hidden flex-col price-yearly price-toggle">
+                        <div class="flex items-baseline space-x-1">
+                            <span class="text-4xl font-extrabold tracking-tight">₹377,989</span>
+                            <span class="text-xs font-semibold text-slate-400">/ yr</span>
+                        </div>
+                        <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 mt-1">~ Save ₹41,999</span>
+                    </div>
+                </div>
+
+                <ul class="text-[11px] space-y-3 text-slate-600 dark:text-slate-400 font-medium">
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Full business control in one system</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Manage multiple staff easily</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Track every customer in real time</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Never miss any follow-ups</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Handle high enquiry volume</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Instant business updates</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Performance visibility</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Scaling support</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Centralized operations</li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-500 mr-2 mt-0.5"></i> Mobile-friendly access</li>
+                </ul>
+            </div>
+            <button onclick="switchPage('contact')" class="w-full py-3.5 rounded-xl text-xs font-bold border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white dark:border-slate-300 dark:text-slate-300 dark:hover:bg-slate-300 dark:hover:text-slate-900 transition-all mt-6">Talk to Expert</button>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto w-full pt-10">
+        <div class="glassmorphism rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs md:text-sm">
+                    <thead class="bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b border-slate-200/60 dark:border-slate-700/60">
+                        <tr>
+                            <th class="py-3 px-4 font-bold tracking-wider">Feature</th>
+                            <th class="py-3 px-4 font-bold tracking-wider text-center">Core</th>
+                            <th class="py-3 px-4 font-bold tracking-wider text-center text-brand-600 dark:text-brand-400">Growth</th>
+                            <th class="py-3 px-4 font-bold tracking-wider text-center">Elite</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200/40 dark:divide-slate-700/40 text-slate-600 dark:text-slate-400 font-medium">
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Professional Online Presence</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Customer Enquiry Tracking</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Follow-up Automation</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Appointment Scheduling</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Business Dashboard</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Team Access</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-amber-500 font-bold">○</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Performance Tracking</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-amber-500 font-bold">○</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Priority Support</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Mobile Access</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-amber-500 font-bold">○</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">Business Insights</td>
+                            <td class="py-3 px-4 text-center text-slate-300 dark:text-slate-600">—</td>
+                            <td class="py-3 px-4 text-center text-amber-500 font-bold">○</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                            <td class="py-3 px-4">System Updates</td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                            <td class="py-3 px-4 text-center text-emerald-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800/40 p-3 text-center text-[10px] text-slate-500 border-t border-slate-200/60 dark:border-slate-700/60">
+                <i class="fas fa-check text-emerald-500 mr-1"></i> Included &nbsp;|&nbsp; <span class="text-amber-500 font-bold text-sm leading-none mr-1">○</span> Optional Add-on &nbsp;|&nbsp; <span class="text-slate-400 mr-1">—</span> Not Included
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-12">
+        <div class="text-center space-y-2 mb-8">
+            <h3 class="text-2xl md:text-3xl font-black tracking-tight">Why MSMEs Choose Scalenova</h3>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center">
+                <i class="fas fa-bullseye text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Never miss customer enquiries</span>
+            </div>
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center">
+                <i class="fas fa-bolt text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Faster response to customers</span>
+            </div>
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center">
+                <i class="fas fa-sitemap text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Organized business flow</span>
+            </div>
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center">
+                <i class="fas fa-chart-line text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Increased conversions</span>
+            </div>
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center">
+                <i class="fas fa-clock text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Save time daily</span>
+            </div>
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center">
+                <i class="fas fa-hands-wash text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Reduce manual work</span>
+            </div>
+            <div class="glassmorphism p-5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 text-center space-y-3 flex flex-col items-center justify-center md:col-span-3 lg:col-span-2">
+                <i class="fas fa-rocket text-brand-500 text-2xl"></i>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Scale without extra staff</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto w-full pt-12">
+        <div class="premium-gradient p-1.5 rounded-2xl shadow-xl">
+            <div class="bg-slate-50 dark:bg-slate-900 rounded-xl p-8 md:p-12 text-center space-y-8">
+                <h3 class="text-2xl md:text-3xl font-black tracking-tight text-slate-800 dark:text-slate-100">Every Missed Enquiry is Lost Revenue</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-bold text-slate-700 dark:text-slate-300 pt-2">
+                    <div class="space-y-3 flex flex-col items-center">
+                        <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 rounded-full flex items-center justify-center text-2xl mb-2"><i class="fas fa-hourglass-half"></i></div>
+                        <span>Slow response = <br class="hidden md:block"><span class="text-rose-600 dark:text-rose-400">Lost customer</span></span>
+                    </div>
+                    <div class="space-y-3 flex flex-col items-center">
+                        <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 rounded-full flex items-center justify-center text-2xl mb-2"><i class="fas fa-user-times"></i></div>
+                        <span>No follow-up = <br class="hidden md:block"><span class="text-rose-600 dark:text-rose-400">Lost deal</span></span>
+                    </div>
+                    <div class="space-y-3 flex flex-col items-center">
+                        <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 rounded-full flex items-center justify-center text-2xl mb-2"><i class="fas fa-folder-open"></i></div>
+                        <span>Unorganized system = <br class="hidden md:block"><span class="text-rose-600 dark:text-rose-400">Lost growth</span></span>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <button onclick="switchPage('contact')" class="px-8 py-4 rounded-xl text-sm font-bold premium-gradient text-white shadow-lg hover:scale-[1.02] transition-transform">👉 Book Free Business Audit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto w-full pt-12">
+        <h3 class="text-2xl md:text-3xl font-black tracking-tight text-center mb-8">Frequently Asked Questions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">What is a Business Operating System?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">It is a single, centralized platform that organizes everything from lead capture to follow-ups, replacing multiple scattered tools to manage your business efficiently.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Who is this for?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">It is built specifically as a CRM Alternative for Small Business owners, including clinics, salons, consultants, and service providers looking for an MSME Automation System.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">How long does setup take?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Your entire Customer Management System and business flow can be fully deployed and ready to use in just 7 to 21 days depending on your chosen plan.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Can I upgrade later?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Yes. You can begin with the Core OS to organize leads, and seamlessly upgrade to the Growth OS to unlock complete SME Digital Transformation as you expand.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Do I need technical knowledge?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Not at all. We handle all the setup, design, and structure. You just use a simple, clean dashboard to run your business easily.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Will this help get more customers?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Yes. By using our structured Lead Tracking System, you respond to inquiries instantly and follow up automatically, naturally increasing your overall conversions.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Is training included?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Yes. Every plan includes an onboarding session to ensure you know exactly how to manage your business through the new platform.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Can my team use it easily?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Absolutely. The system is designed to be highly intuitive. Your staff can easily view schedules via the Appointment Booking System without confusion.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Is support included?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Yes, continuous support is provided to ensure your Business Operating System runs flawlessly, so you can focus entirely on your customers.</p>
+            </div>
+            <div class="glassmorphism p-5 md:p-6 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                <h4 class="font-bold text-sm md:text-base text-brand-700 dark:text-brand-400 mb-2">Do I own my data?</h4>
+                <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">100%. All customer information remains your sole property. The system is securely built to organize and protect your business assets.</p>
+            </div>
+        </div>
+    </section>
 </main>
-
 <main id="page-contact" class="flex-grow max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start animate-fade-in hidden w-full">
 <div class="space-y-6 md:space-y-8">
 <div class="space-y-2">
@@ -565,7 +810,7 @@ Business Automation Systems, <br/>
 <option value="Email">Email</option>
 </select>
 </div>
-<button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl shadow-brand-600/20">🚀 Book Free Consultation</button>
+<button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl shadow-brand-600/20">🚀 See Live Demo</button>
 </form>
 </div>
 </div>
@@ -873,6 +1118,49 @@ function handleFormSubmit(e, successMsg) {
     e.preventDefault();
     alert(successMsg);
     e.target.reset();
+}
+
+function togglePricing(period) {
+    const isYearly = period === 'yearly';
+    
+    // Toggle active button states
+    const btnMonthly = document.getElementById('btn-monthly');
+    const btnYearly = document.getElementById('btn-yearly');
+    
+    if (isYearly) {
+        btnYearly.classList.add('bg-brand-500', 'text-white', 'shadow-md');
+        btnYearly.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:text-brand-500');
+        
+        btnMonthly.classList.remove('bg-brand-500', 'text-white', 'shadow-md');
+        btnMonthly.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:text-brand-500');
+    } else {
+        btnMonthly.classList.add('bg-brand-500', 'text-white', 'shadow-md');
+        btnMonthly.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:text-brand-500');
+        
+        btnYearly.classList.remove('bg-brand-500', 'text-white', 'shadow-md');
+        btnYearly.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:text-brand-500');
+    }
+
+    // Toggle content visibility
+    document.querySelectorAll('.price-monthly').forEach(el => {
+        if (isYearly) {
+            el.classList.add('hidden');
+            el.classList.remove('flex');
+        } else {
+            el.classList.remove('hidden');
+            el.classList.add('flex');
+        }
+    });
+
+    document.querySelectorAll('.price-yearly').forEach(el => {
+        if (isYearly) {
+            el.classList.remove('hidden');
+            el.classList.add('flex');
+        } else {
+            el.classList.add('hidden');
+            el.classList.remove('flex');
+        }
+    });
 }
 </script>
 </body>
